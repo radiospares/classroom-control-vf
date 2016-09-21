@@ -48,6 +48,6 @@ node default {
       ensure => file,
       owner => root,
       group => root,
-      content => "I learned how to manage a file in github",
+      content => "I learned how to manage a file in github\n",
       }
 }
