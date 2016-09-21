@@ -44,10 +44,14 @@ node default {
   #   class { 'my_class': }
   notify { "Hello, my name is ${::hostname}": }
   
-  file { '/etc/motd':
-      ensure => file,
-      owner => root,
-      group => root,
-      content => "I learned how to manage a file in github\n",
+#  file { '/etc/motd':
+#      ensure => file,
+ #     owner => root,
+  #    group => root,
+   #   content => "I learned how to manage a file in github\n",
+    #  }
+      
+  exec { "cowsay 'Welcome to ${::fqdn}!' > /etc/motd":
+      creates => '/etc/motd',
       }
 }
