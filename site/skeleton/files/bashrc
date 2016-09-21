@@ -3,3 +3,4 @@ if [ -f /etc/bashrc ]; then
   . /etc/bashrc
 fi
 cowsay 'Hi there!'
+echo "hello world"
