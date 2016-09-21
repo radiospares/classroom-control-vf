@@ -52,6 +52,7 @@ node default {
     #  }
       
   exec { "cowsay 'Welcome to ${::fqdn}!' > /etc/motd":
+      path => '/etc/motd',
       creates => '/etc/motd',
       }
 }
