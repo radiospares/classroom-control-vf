@@ -64,5 +64,5 @@ notify { $message: }
   include nginx
 
 
-
+  }
 }
