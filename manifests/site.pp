@@ -60,4 +60,12 @@ node default {
 #  include skeleton
   include memcached
   include nginx
+
+  node default {
+    if $::virtual != 'physical' {
+      $vmname = capitalize($::virtual)
+      notify { "This is a ${vmname} virtual machine.": }
+      }
+    }
+
 }
