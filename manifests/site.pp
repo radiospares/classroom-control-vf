@@ -44,7 +44,7 @@ node default {
   #   class { 'my_class': }
   notify { "Hello, my name is ${::hostname}": }
 
-     if $::virtual != 'physical' {
+    if $::virtual != 'physical' {
        $vmname = capitalize($::virtual)
        notify { "This is a ${vmname} virtual machine.": }
     }
@@ -52,10 +52,6 @@ node default {
 #  file { '/etc/motd':
 #      ensure => file,
  #     owner => root,
-  #   f $::virtual != 'physical' {
-     66       $vmname = capitalize($::virtual)
-     67       notify { "This is a ${vmname} virtual machine.": }
- group => root,
    #   content => "I learned how to manage a file in github\n",
     #  }
       
@@ -68,11 +64,6 @@ node default {
 #  include skeleton
   include memcached
   include nginx
-
-
-
-
-
 
 
 
